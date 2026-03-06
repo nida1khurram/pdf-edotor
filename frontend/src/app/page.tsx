@@ -10,7 +10,7 @@ import dynamic from "next/dynamic";
 const CanvaStyleEditor = dynamic(() => import("@/components/CanvaStyleEditor"), { ssr: false });
 const PDFCanvasTextEditor = dynamic(() => import("@/components/PDFCanvasTextEditor"), { ssr: false });
 
-const API = "http://localhost:8000/api/pdf";
+const API = `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/pdf`;
 
 // ──────────────── UTILS ────────────────
 function downloadBlob(blob: Blob, name: string) {

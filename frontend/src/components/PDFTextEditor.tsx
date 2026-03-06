@@ -17,7 +17,7 @@ import { useDropzone } from "react-dropzone";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const API = "http://localhost:8000/api/pdf";
+const API = `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/pdf`;
 
 interface PageData {
   page: number;

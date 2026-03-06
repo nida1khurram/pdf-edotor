@@ -1,3 +1,13 @@
+---
+title: PDF Editor Backend
+emoji: 📄
+colorFrom: orange
+colorTo: red
+sdk: docker
+pinned: false
+app_port: 7860
+---
+
 # 📄 PDF Editor Pro v2.0
 ## Canvas Editor + All PDF Tools
 
