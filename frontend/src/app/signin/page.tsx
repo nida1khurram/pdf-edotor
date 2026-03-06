@@ -20,8 +20,8 @@ export default function SignInPage() {
       const { data, error } = await signIn.email({ email, password, callbackURL: "/" });
       if (error) setError(error.message || "Sign in failed");
       else router.push("/");
-    } catch {
-      setError("An unexpected error occurred");
+    } catch (e: unknown) {
+      setError(e instanceof Error ? e.message : "An unexpected error occurred");
     } finally {
       setLoading(false);
     }
